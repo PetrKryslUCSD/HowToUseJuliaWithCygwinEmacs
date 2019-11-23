@@ -9,4 +9,5 @@
 (require 'julia-mode)
 (require 'julia-repl)
 (setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
+(add-hook 'julia-mode-hook 'julia-repl-mode) ;; always use minor mode
 
