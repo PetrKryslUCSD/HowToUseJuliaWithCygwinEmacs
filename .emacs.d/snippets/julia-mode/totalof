@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: totalof
+# key: totalof
+# contributor: Petr Krysl
+# --
+tot${1:x}$0

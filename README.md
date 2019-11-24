@@ -41,6 +41,10 @@ HippieExpand
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 ```
 
+### YASnippets
+
+Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets)
+
 ## Notes
 
 C-x k kill buff

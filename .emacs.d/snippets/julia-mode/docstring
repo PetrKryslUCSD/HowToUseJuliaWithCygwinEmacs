@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: docstring
+# key: docstring
+# contributor: Petr Krysl
+# --
+"""
+    ${1:x}
+
+${2:body}
+"""
+$0

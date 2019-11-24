@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: counterof
+# key: counterof
+# contributor: Petr Krysl
+# --
+num${1:x}$0

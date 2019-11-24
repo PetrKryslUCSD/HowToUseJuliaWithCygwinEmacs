@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: cntr
+# key: cntr
+# contributor: Petr Krysl
+# --
+num${1:x}$0
