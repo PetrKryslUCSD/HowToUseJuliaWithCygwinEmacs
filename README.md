@@ -4,8 +4,9 @@
 
 ### Install the files for the Julia mode and the Julia REPL
 
-`julia-mode.el`
-`julia-repl.el`
+The Julia  programming is supported by:
+- `julia-mode.el` to be found at [https://github.com/tpapp/julia-emacs](https://github.com/tpapp/julia-emacs).
+- `julia-repl.el` to be found at [https://github.com/tpapp/julia-repl](https://github.com/tpapp/julia-repl).
 
 
 ### The `init.el` file
