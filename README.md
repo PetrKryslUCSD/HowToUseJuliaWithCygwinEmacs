@@ -2,9 +2,10 @@
 
 ## Setting up the `.emacs.d` directory
 
-### Installed the files for the Julia mode and the Julia REPL
+### Install the files for the Julia mode and the Julia REPL
 
 `julia-mode.el`
+`julia-repl.el`
 
 
 ### The `init.el` file
@@ -21,4 +22,21 @@ Add the `list` directory to the load path.
 
 For working with Git I use command-line `git`running in a regular
 Emacs shell, opened with the command `open git`.  The shell is renamed
-to `*git*`. 
+to `*git*`.
+
+### Dynamic abbreviations
+
+HippieExpand
+
+### Multiple cursors
+
+http://pragmaticemacs.com/emacs/multiple-cursors/
+M-x multiple-cursors-mode (toggle)
+
+## Notes
+
+C-x k kill buff
+M-C-SPC followed by M-left select word
+C-k kill line
+
+(mark-sexp)
