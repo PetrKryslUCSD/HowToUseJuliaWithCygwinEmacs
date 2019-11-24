@@ -16,3 +16,6 @@ Add the `list` directory to the load path.
 (require 'julia-repl)
 (setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
 ```
+
+### Git
+magit
