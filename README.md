@@ -27,16 +27,21 @@ to `*git*`.
 ### Dynamic abbreviations
 
 HippieExpand
+`(global-set-key [remap dabbrev-expand] 'hippie-expand)`
 
 ### Multiple cursors
 
-http://pragmaticemacs.com/emacs/multiple-cursors/
-M-x multiple-cursors-mode (toggle)
+[Multiple cursors package](http://pragmaticemacs.com/emacs/multiple-cursors/)
+`M-x multiple-cursors-mode`
+
+```
+(add-to-list 'load-path "/home/PetrKrysl/.emacs.d/lisp/multiple-cursors")
+(require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+```
 
 ## Notes
 
 C-x k kill buff
 M-C-SPC followed by M-left select word
 C-k kill line
-
-(mark-sexp)
