@@ -13,10 +13,14 @@
 ;; Add multiple cursors
 (add-to-list 'load-path "~/.emacs.d/lisp/multiple-cursors")
 (require 'multiple-cursors)
+;; This key  will expand the selection.
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 
 ;; Dynamic abbreviations
 (global-set-key [remap dabbrev-expand] 'hippie-expand)
+
+;; Replace highlighted text with what I type?.
+(delete-selection-mode 1)
 
 ;; Julia programming
 (require 'julia-mode)
@@ -24,7 +28,7 @@
 ;; When on cygwin, rewrite the file names.
 (setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
 (add-hook 'julia-mode-hook 'julia-repl-mode) ;; always use minor mode
-(setenv "JULIA_NUM_THREADS" "2")
+(setenv "JULIA_NUM_THREADS" "2")	     ; set the default number of threads
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
