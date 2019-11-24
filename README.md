@@ -18,4 +18,7 @@ Add the `list` directory to the load path.
 ```
 
 ### Git
-magit
+
+For working with Git I use command-line `git`running in a regular
+Emacs shell, opened with the command `open git`.  The shell is renamed
+to `*git*`. 
