@@ -43,15 +43,20 @@
 
 ;; YASnippet is a code template system for Emacs. http://github.com/capitaomorte/yasnippet
 (yas-global-mode 1)
-;; (setq-default abbrev-mode t)
-;; (autoload 'expand-abbrev-hook "expand")
-;; (define-abbrev-table 'julia-mode-abbrev-table
-;;   '(("inc"   "include(\"\")" )
-;;     ("if"    "if () \n\nend" "C-M-b C-M-q C-- C-M-d")
-;;     ("el"  "else \n\n"  "C-M-b C-M-q C-M-d RET")
-;;     ("while" "while () \n\nend" "C-M-b C-M-q C-- C-M-d")
-;;     ("for"   "for _ in \n\nend" "C-M-b C-M-q C-M-b C-M-d")
-;;     ))
+
+;; Tags
+(setq path-to-ctags (expand-file-name "~/ctags58/ctags.exe")) ;; <- your ctags path here
+(setq path-to-julia-ctags (expand-file-name "~/ctags58/julia-ctags")) ;; <- your julia-ctags path here
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "%s -f TAGS --options=%s -e -R --totals=yes %s/*.jl"
+	   (julia-repl--path-rewrite path-to-ctags julia-repl-path-rewrite-rules)
+	   (julia-repl--path-rewrite path-to-julia-ctags julia-repl-path-rewrite-rules)
+	   (julia-repl--path-rewrite (expand-file-name (directory-file-name dir-name)) julia-repl-path-rewrite-rules)
+	   ))
+  )
 
 ;; Custom variables.
 (custom-set-variables
@@ -61,7 +66,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (yasnippet)))
+ '(package-selected-packages (quote (ac-etags markdown-mode yasnippet)))
  '(visible-cursor t))
 
 (custom-set-faces
