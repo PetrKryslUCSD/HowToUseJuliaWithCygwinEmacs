@@ -43,10 +43,10 @@ HippieExpand
 
 ### YASnippets
 
+[YASnippets](https://github.com/joaotavora/yasnippet)
 Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets)
 
 ## Notes
 
 C-x k kill buff
-M-C-SPC followed by M-left select word
-C-k kill line
+
