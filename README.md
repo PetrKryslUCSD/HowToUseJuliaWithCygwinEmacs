@@ -6,7 +6,8 @@ My personal copy of this directory, partially equipped, is part of this reposito
 
 ### The `init.el` file
 
-My copy of the `init.el` file is part of this repository [(see)](https://github.com/PetrKryslUCSD/HowToUseJuliaWithCygwinEmacs/tree/master/.emacs.d).
+My copy of the `init.el` file is part of this repository
+[(see)](https://github.com/PetrKryslUCSD/HowToUseJuliaWithCygwinEmacs/tree/master/.emacs.d).
 It is fully commented.
 
 ## Dragon voice commands
@@ -23,6 +24,11 @@ The Julia  programming is supported by:
 - `julia-mode.el` to be found at [https://github.com/tpapp/julia-emacs](https://github.com/tpapp/julia-emacs).
 - `julia-repl.el` to be found at [https://github.com/tpapp/julia-repl](https://github.com/tpapp/julia-repl).
 These files are installed in the `lisp` directory.
+
+Operating Julia within Emacs on cygwin requires some care: Windows  programs (such as Julia, or ctags)
+do not handle correctly cygwin directory and file names. Fortunately, `julia-repl.el`
+implements a set of rewriting rules that can translate between  the paths under cygwin and the Windows drives.
+
 
 
 ### Git
@@ -42,27 +48,27 @@ The command is supported with  the following Lisp code:
   )
 ```
 
+### Tags
+
+Needs to be written
 
 ### Dynamic abbreviations
 
-HippieExpand
-`(global-set-key [remap dabbrev-expand] 'hippie-expand)`
+I use HippieExpand. A voice command is linked  to
+`(global-set-key [remap dabbrev-expand] 'hippie-expand)`.
 
 ### Multiple cursors
 
-[Multiple cursors package](http://pragmaticemacs.com/emacs/multiple-cursors/)
-`M-x multiple-cursors-mode`
-
-```
-(add-to-list 'load-path "/home/PetrKrysl/.emacs.d/lisp/multiple-cursors")
-(require 'multiple-cursors)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-```
+I use the excellent [Multiple cursors
+package](http://pragmaticemacs.com/emacs/multiple-cursors/).  The
+package needs to be toggled on and off (via a voice command), and
+there is a couple of voice commands for setting the multiple cursor.
 
 ### YASnippets
 
-[YASnippets](https://github.com/joaotavora/yasnippet)
-Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets)
+The functionality is provided by [YASnippets](https://github.com/joaotavora/yasnippet).
+The basis consists of Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets).
+I added a few of my own.
 
 ### Markdown
 
@@ -70,5 +76,4 @@ Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnipp
 
 ## Notes
 
-C-x k kill buff
 
