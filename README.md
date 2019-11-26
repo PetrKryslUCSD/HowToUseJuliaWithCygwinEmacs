@@ -2,22 +2,24 @@
 
 ## Setting up the `.emacs.d` directory
 
-### Install the files for the Julia mode and the Julia REPL
+My personal copy of this directory, partially equipped, is part of this repository.
+
+### The `init.el` file
+
+My copy of the `init.el` file is part of this repository.
+It is fully commented.
+
+## Dragon voice commands
+
+The Dragon voice commands are described in the sections recorded in the
+`Emacs-Dragon-commands.xml` file.
+
+### Julia mode and the Julia REPL
 
 The Julia  programming is supported by:
 - `julia-mode.el` to be found at [https://github.com/tpapp/julia-emacs](https://github.com/tpapp/julia-emacs).
 - `julia-repl.el` to be found at [https://github.com/tpapp/julia-repl](https://github.com/tpapp/julia-repl).
-
-
-### The `init.el` file
-
-Add the `list` directory to the load path.
-```
-(add-to-list 'load-path "/home/PetrKrysl/.emacs.d/lisp")
-(require 'julia-mode)
-(require 'julia-repl)
-(setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
-```
+These files are installed in the `lisp` directory.
 
 
 ### Git
