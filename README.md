@@ -19,11 +19,24 @@ Add the `list` directory to the load path.
 (setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
 ```
 
+
 ### Git
 
 For working with Git I use command-line `git`running in a regular
 Emacs shell, opened with the command `open git`.  The shell is renamed
 to `*git*`.
+
+```
+(defun create-git-shell (dir-name)
+  "Create git shell."
+  (interactive "DDirectory: ")
+  (cd dir-name)
+  (eshell nil)
+  (rename-buffer
+   (format "*git %s" dir-name))
+  )
+```
+
 
 ### Dynamic abbreviations
 
@@ -45,6 +58,10 @@ HippieExpand
 
 [YASnippets](https://github.com/joaotavora/yasnippet)
 Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets)
+
+### Markdown
+
+(http://jblevins.org/projects/markdown-mode/)
 
 ## Notes
 
