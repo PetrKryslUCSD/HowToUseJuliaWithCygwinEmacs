@@ -6,7 +6,7 @@ My personal copy of this directory, partially equipped, is part of this reposito
 
 ### The `init.el` file
 
-My copy of the `init.el` file is part of this repository.
+My copy of the `init.el` file is part of this repository [(see)](https://github.com/PetrKryslUCSD/HowToUseJuliaWithCygwinEmacs/tree/master/.emacs.d).
 It is fully commented.
 
 ## Dragon voice commands
