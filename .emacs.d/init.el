@@ -51,11 +51,20 @@
   "Create tags file."
   (interactive "DDirectory: ")
   (shell-command
-   (format "%s -f TAGS --options=%s -e -R --totals=yes %s/*.jl"
+   (format "%s -f TAGS --options=%s -e -R --totals=yes *.jl"
 	   (julia-repl--path-rewrite path-to-ctags julia-repl-path-rewrite-rules)
 	   (julia-repl--path-rewrite path-to-julia-ctags julia-repl-path-rewrite-rules)
-	   (julia-repl--path-rewrite (expand-file-name (directory-file-name dir-name)) julia-repl-path-rewrite-rules)
 	   ))
+  )
+
+;; Git
+(defun create-git-shell (dir-name)
+  "Create git shell."
+  (interactive "DDirectory: ")
+  (cd dir-name)
+  (eshell nil)
+  (rename-buffer
+   (format "*git %s" dir-name))
   )
 
 ;; Custom variables.
