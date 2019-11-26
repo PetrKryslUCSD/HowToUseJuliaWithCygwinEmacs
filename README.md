@@ -11,8 +11,11 @@ It is fully commented.
 
 ## Dragon voice commands
 
-The Dragon voice commands are described in the sections recorded in the
-`Emacs-Dragon-commands.xml` file.
+The Dragon voice commands are grouped into  sections, defined in the
+`Emacs-Dragon-commands.xml` file. This file can be imported into Dragon Professional 15 and up.
+The commands are thoroughly documented. Some commands require lisp commands to work: refer to  `init.el`.
+
+## More details
 
 ### Julia mode and the Julia REPL
 
@@ -24,10 +27,10 @@ These files are installed in the `lisp` directory.
 
 ### Git
 
-For working with Git I use command-line `git`running in a regular
+For working with Git I use command-line `git`running in an extended
 Emacs shell, opened with the command `open git`.  The shell is renamed
-to `*git*`.
-
+to `*git ddd*`, where `ddd` is the name of the git repository (directory).
+The command is supported with  the following Lisp code:
 ```
 (defun create-git-shell (dir-name)
   "Create git shell."
