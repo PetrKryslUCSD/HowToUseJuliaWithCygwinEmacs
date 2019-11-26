@@ -1,13 +1,11 @@
 ;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments. 
+;; installed packages.  
 (package-initialize)
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-;; Add our local list files to the load path.
+;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Add multiple cursors
@@ -24,6 +22,9 @@
 
 ;; Show matching parentheses.
 (setq show-paren-mode t)
+
+;; Command to insert a matching pair of brackets
+(global-set-key (kbd "M-[") 'insert-pair)
 
 ;; Quiet, please! No dinging!
 (setq visible-bell nil)
@@ -58,6 +59,7 @@
   )
 
 ;; Git
+;; Code to be linked to a voice command.
 (defun create-git-shell (dir-name)
   "Create git shell."
   (interactive "DDirectory: ")
@@ -75,7 +77,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (ac-etags markdown-mode yasnippet)))
+ '(package-selected-packages (quote (markdown-mode yasnippet)))
  '(visible-cursor t))
 
 (custom-set-faces
