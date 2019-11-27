@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: setuptestmodule 
+# key: setuptestmodule
+# contributor: Petr Krysl
+# --
+module ${1:name}
+using FinEtools
+using Test
+function test()	
+${2:body}
+return true
+end
+end
+using .${1:name}
+${1:name}.test()
+$0
+
