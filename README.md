@@ -60,17 +60,10 @@ cygwin and the Windows drives.
 For working with Git I use command-line `git`running in an extended
 Emacs shell, opened with the command `open git`.  The shell is renamed
 to `*git ddd*`, where `ddd` is the name of the git repository (directory).
-The command is supported with  the following Lisp code:
-```
-(defun create-git-shell (dir-name)
-  "Create git shell."
-  (interactive "DDirectory: ")
-  (cd dir-name)
-  (eshell nil)
-  (rename-buffer
-   (format "*git %s" dir-name))
-  )
-```
+The command is supported with a bit of Lisp code in `init.el`.
+
+The Git commands in common use  (status, add, commit, ...) are provided as voice commands.
+Any other Git command may also be used, of course.
 
 ### Tags
 
