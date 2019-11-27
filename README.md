@@ -2,18 +2,19 @@
 
 ## Which  Emacs?
 
-I am running cygwin version 2.897 (64-bit).
+I am running cygwin version 2.897 (64-bit) on Windows 10.
 
-I use the emacs-w32 package in cygwin. As I understand it is emacs
+I use the emacs-w32 package in cygwin. As I understand it this is emacs
 compiled for the win 32 api, and so it is using the native UI.
 Importantly, it supports the ANSI term.
 
 I went with the latest version (November 2019), that is 26.3. The
-packages to download are emacs-w32 and emacs-common.
+packages to download are emacs-w32 and emacs-common. 
 
 ## Setting up the `.emacs.d` directory
 
-My personal copy of this directory, partially equipped, is part of this repository.
+My personal copy of this directory, partially equipped, is part of
+this repository.
 
 ### The `init.el` file
 
@@ -23,9 +24,11 @@ It is fully commented.
 
 ## Dragon voice commands
 
-The Dragon voice commands are grouped into  sections, defined in the
-`Emacs-Dragon-commands.xml` file. This file can be imported into Dragon Professional 15 and up.
-The commands are thoroughly documented. Some commands require lisp commands to work: refer to  `init.el`.
+The Dragon voice commands are grouped into sections, defined in the
+`Emacs-Dragon-commands.xml` file. This file can be imported into
+Dragon Professional 15 and up.  The commands are thoroughly
+documented. Some commands require lisp commands to work: refer to
+`init.el`.
 
 ## More details
 
@@ -36,9 +39,11 @@ The Julia  programming is supported by:
 - `julia-repl.el` to be found at [https://github.com/tpapp/julia-repl](https://github.com/tpapp/julia-repl).
 These files are installed in the `lisp` directory.
 
-Operating Julia within Emacs on cygwin requires some care: Windows  programs (such as Julia, or ctags)
-do not handle correctly cygwin directory and file names. Fortunately, `julia-repl.el`
-implements a set of rewriting rules that can translate between  the paths under cygwin and the Windows drives.
+Operating Julia within Emacs on cygwin requires some care: Windows
+programs (such as Julia, or ctags) do not handle correctly cygwin
+directory and file names. Fortunately, `julia-repl.el` implements a
+set of rewriting rules that can translate between the paths under
+cygwin and the Windows drives.
 
 
 
