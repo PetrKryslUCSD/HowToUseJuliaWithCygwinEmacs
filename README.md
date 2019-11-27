@@ -23,6 +23,8 @@ To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
 - The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
 - The `.emacs.d/lisp` directory holds a copy of the `multiple-cursors` package.
 
+Both the Julia mode and  the Julia REPL will be soon available from [MELPA](https://melpa.org/#/getting-started).
+When that happens, it should be enough to rely on `(require 'julia-mode)` etc. instead of the bundled files.
 
 ### The `init.el` file
 
