@@ -5,6 +5,18 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
+;; Custom variables.
+;; I like to be able to drag regions with the mouse.
+(custom-set-variables
+ '(custom-enabled-themes (quote (misterioso)))
+ '(mouse-drag-and-drop-region t)
+ '(package-selected-packages (quote (markdown-mode yasnippet)))
+ '(visible-cursor t))
+
+;; It is great to be able to see the cursor at the first glance.
+(custom-set-faces
+ '(cursor ((t (:background "red")))))
+
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
@@ -46,11 +58,13 @@
 
 ;; Snippets.
 ;; YASnippet is a code template system for Emacs. http://github.com/capitaomorte/yasnippet
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
 (yas-global-mode 1)
 
 ;; Tags: Exuberant CTAGS.
-;; The executable. I installed the entire directory into my home folder.
-;; Change this if it is in a different place.
+;; The executable: I installed the entire directory into my home folder.
+;; Change this if yours is in a different place.
 (setq path-to-ctags (expand-file-name "~/ctags58/ctags.exe")) ;; <- your ctags path here
 ;; Note that the julia-ctags file is needed to inform the executable
 ;; of the syntax of Julia. This one is renamed from the one available
@@ -77,15 +91,3 @@
   (rename-buffer
    (format "*git %s*" dir-name))
   )
-
-;; Custom variables.
-;; I like to be able to drag regions with the mouse.
-(custom-set-variables
- '(custom-enabled-themes (quote (misterioso)))
- '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (markdown-mode yasnippet)))
- '(visible-cursor t))
-
-;; It is great to be able to see the cursor at the first glance.
-(custom-set-faces
- '(cursor ((t (:background "red")))))
