@@ -16,10 +16,13 @@ packages to download are `emacs-w32` and `emacs-common`.
 My personal copy of this directory, partially equipped, is part of
 this repository.
 
-For some weird reason `s.el` is needed but not found in some default location.
+- The Julia mode, represented by the `julia-mode.el` file, is included in  `.emacs.d/lisp`.
+- The Julia minor mode for the REPL, `julia-repl.el`,  is included in  `.emacs.d/lisp`.
+- For some weird reason `s.el` is needed but not found in some default location.
 To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
+- The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
+- The `.emacs.d/lisp` directory holds a copy of the `multiple-cursors` package.
 
-The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
 
 ### The `init.el` file
 
