@@ -2,19 +2,24 @@
 
 ## Which  Emacs?
 
-I am running cygwin version 2.897 (64-bit) on Windows 10.
+I am running `cygwin` version 2.897 (64-bit) on Windows 10.
 
-I use the emacs-w32 package in cygwin. As I understand it this is emacs
+I use the `emacs-w32` package in `cygwin`. As I understand it this is emacs
 compiled for the win 32 api, and so it is using the native UI.
 Importantly, it supports the ANSI term.
 
 I went with the latest version (November 2019), that is 26.3. The
-packages to download are emacs-w32 and emacs-common. 
+packages to download are `emacs-w32` and `emacs-common`. 
 
 ## Setting up the `.emacs.d` directory
 
 My personal copy of this directory, partially equipped, is part of
 this repository.
+
+For some weird reason `s.el` is needed but not found in some default location.
+To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
+
+The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
 
 ### The `init.el` file
 
@@ -40,7 +45,7 @@ The Julia  programming is supported by:
 These files are installed in the `lisp` directory.
 
 Operating Julia within Emacs on cygwin requires some care: Windows
-programs (such as Julia, or ctags) do not handle correctly cygwin
+programs (such as Julia, or ctags) do not handle correctly `cygwin`
 directory and file names. Fortunately, `julia-repl.el` implements a
 set of rewriting rules that can translate between the paths under
 cygwin and the Windows drives.
@@ -83,7 +88,14 @@ there is a couple of voice commands for setting the multiple cursor.
 ### YASnippets
 
 The functionality is provided by [YASnippets](https://github.com/joaotavora/yasnippet).
-The basis consists of Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets).
+If you wish, you can install this package by yourself:
+```
+cd ~/.emacs.d/plugins
+git clone --recursive https://github.com/joaotavora/yasnippet
+```
+Otherwise the `.emacs.d/plugins/` directory contains a copy of this package.
+
+The foundation consists of Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets).
 I added a few of my own.
 
 ### Markdown
