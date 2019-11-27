@@ -8,7 +8,7 @@ I use the `emacs-w32` package in `cygwin`. As I understand it this is emacs
 compiled for the win 32 api, and so it is using the native UI.
 Importantly, it supports the ANSI term.
 
-I went with the latest version (November 2019), that is 26.3. The
+I went with the latest version, that is 26.3 (November 2019). The
 packages to download are `emacs-w32` and `emacs-common`. 
 
 ## Setting up the `.emacs.d` directory
@@ -25,6 +25,10 @@ To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
 
 Both the Julia mode and  the Julia REPL will be soon available from [MELPA](https://melpa.org/#/getting-started).
 When that happens, it should be enough to rely on `(require 'julia-mode)` etc. instead of the bundled files.
+
+### Additional installs
+
+Use the package manager to install `markdown-mode`.
 
 ### The `init.el` file
 
@@ -98,7 +102,8 @@ I added a few of my own.
 
 ### Markdown
 
-(http://jblevins.org/projects/markdown-mode/)
+I use the [markdown mode](http://jblevins.org/projects/markdown-mode/).
+It needs to be installed from the  package menu initially.
 
 ## Notes
 

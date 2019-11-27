@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: counterof
-# key: counterof
+# name: where ...
+# key: where
 # contributor: Petr Krysl
 # --
-cnt${1:thing}$0
+ where {${1:T}$0}
