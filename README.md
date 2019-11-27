@@ -1,5 +1,16 @@
 # How to use Julia with Cygwin Emacs
 
+## Which  Emacs?
+
+I am running cygwin version 2.897 (64-bit).
+
+I use the emacs-w32 package in cygwin. As I understand it is emacs
+compiled for the win 32 api, and so it is using the native UI.
+Importantly, it supports the ANSI term.
+
+I went with the latest version (November 2019), that is 26.3. The
+packages to download are emacs-w32 and emacs-common.
+
 ## Setting up the `.emacs.d` directory
 
 My personal copy of this directory, partially equipped, is part of this repository.
