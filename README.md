@@ -127,3 +127,10 @@ It needs to be installed from the  package menu initially.
 ## Notes
 
 
+## Acknowledgments
+
+[orialb](https://discourse.julialang.org/u/orialb) provided code to
+automatically install necessary packages from the Emacs
+archives. [tamas_papp](https://discourse.julialang.org/u/tamas_papp)
+is the (co-)author of the Julia packages, and was instrumental in
+making this whole thing work under `cygwin`.
