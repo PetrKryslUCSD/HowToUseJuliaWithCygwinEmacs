@@ -37,6 +37,9 @@ To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
 
 Both the Julia mode and  the Julia REPL will be soon available from [MELPA](https://melpa.org/#/getting-started).
 When that happens, it should be enough to rely on `(require 'julia-mode)` etc. instead of the bundled files.
+It is certainly possible to install updates to certain packages (such as the Julia modes) from MELPA.
+For instance,  use `package` to install from Emacs package repositories (for which `init.el` file
+is already set up).
 
 ### Additional installs
 
