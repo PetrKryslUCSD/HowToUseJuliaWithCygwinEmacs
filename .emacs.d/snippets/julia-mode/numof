@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: numof
+# key: numof
+# contributor: Petr Krysl
+# --
+num{1:x}$0
