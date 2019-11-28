@@ -22,7 +22,7 @@ shell you should get a fully functional Emacs window.
 
 If you wish, this default set up may be modified as described below.
 
-## Set up of the `.emacs.d` directory
+## Makeup of the `.emacs.d` directory
 
 My personal copy of this directory, partially equipped, is part of
 this repository.
