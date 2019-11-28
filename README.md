@@ -11,7 +11,18 @@ Importantly, it supports the ANSI term.
 I went with the latest version, that is 26.3 (November 2019). The
 packages to download are `emacs-w32` and `emacs-common`. 
 
-## Setting up the `.emacs.d` directory
+## Starting Emacs
+
+The quickest way to get started is to copy the `.emacs.d` directory
+from this repository to your home folder under `cygwin` (for instance `/home/YourName`).
+Then also unzip the `ctags58.7z` in the home folder  ("Extract here"  of 7-zip).
+
+Then, if you execute `emacs-w32` in the `cygwin`
+shell you should get a fully functional Emacs window.
+
+If you wish, this default set up may be modified as described below.
+
+## Set up of the `.emacs.d` directory
 
 My personal copy of this directory, partially equipped, is part of
 this repository.
