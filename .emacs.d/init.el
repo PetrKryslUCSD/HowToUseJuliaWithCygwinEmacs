@@ -5,17 +5,17 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-;; Custom variables.
-;; I like to be able to drag regions with the mouse.
-(custom-set-variables
- '(custom-enabled-themes (quote (misterioso)))
- '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (markdown-mode yasnippet)))
- '(visible-cursor t))
+  ;; install use-package if not installed
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package t))
 
-;; It is great to be able to see the cursor at the first glance.
-(custom-set-faces
- '(cursor ((t (:background "red")))))
+;; install s.el
+(use-package s
+      :ensure t
+      :config
+      ;; some config for s here
+)
 
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -49,8 +49,18 @@
                               (set-face-background 'default face-background))))
 
 ;; Julia programming
-(require 'julia-mode)
-(require 'julia-repl)
+;; install julia-mode
+(use-package julia-mode
+      :ensure t
+      :config
+      ;; some config for julia-mode here
+)
+;; install julia-repl
+(use-package julia-repl
+      :ensure t
+      :config
+      ;; some config for julia-repl here
+)
 ;; When on cygwin, rewrite the file names.
 (setq julia-repl-path-rewrite-rules julia-repl-cygwin-path-rewrite-rules)
 (add-hook 'julia-mode-hook 'julia-repl-mode) ;; always use minor mode
@@ -58,13 +68,17 @@
 
 ;; Snippets.
 ;; YASnippet is a code template system for Emacs. http://github.com/capitaomorte/yasnippet
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
+  ;; install use-package if not installed
+(use-package yasnippet
+      :ensure t
+      :config
+      ;; some config for yasnippet here
+)
 (yas-global-mode 1)
 
 ;; Tags: Exuberant CTAGS.
-;; The executable: I installed the entire directory into my home folder.
-;; Change this if yours is in a different place.
+;; The executable. I installed the entire directory into my home folder.
+;; Change this if it is in a different place.
 (setq path-to-ctags (expand-file-name "~/ctags58/ctags.exe")) ;; <- your ctags path here
 ;; Note that the julia-ctags file is needed to inform the executable
 ;; of the syntax of Julia. This one is renamed from the one available
@@ -91,3 +105,23 @@
   (rename-buffer
    (format "*git %s*" dir-name))
   )
+
+;; Custom variables.
+;; I like to be able to drag regions with the mouse.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (misterioso)))
+ '(mouse-drag-and-drop-region t)
+ '(package-selected-packages (quote (markdown-mode yasnippet)))
+ '(visible-cursor t))
+
+;; It is great to be able to see the cursor at the first glance.
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "red")))))

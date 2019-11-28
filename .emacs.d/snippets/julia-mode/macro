@@ -3,7 +3,7 @@
 # key: macro
 # contributor: hankail05
 # --
-macro ${1:name}(${2:args})
+macro ${1:macro}(${2:args})
     ${3:body}
 end
 $0

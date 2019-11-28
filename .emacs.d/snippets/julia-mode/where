@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: where ...
-# key: where
-# contributor: Petr Krysl
-# --
- where {${1:T}$0}

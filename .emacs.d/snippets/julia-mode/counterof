@@ -3,4 +3,4 @@
 # key: counterof
 # contributor: Petr Krysl
 # --
-cnt${1:thing}$0
+num${1:x}$0

@@ -1,7 +1,6 @@
 # -*- mode: snippet -*-
 # name: using ...
 # key: using
-# contributor: Petr Krysl
+# contributor: hankail05
 # --
-using ${1:APackage}${2::} $3
-$0
+using ${1:${2:package}:}$0

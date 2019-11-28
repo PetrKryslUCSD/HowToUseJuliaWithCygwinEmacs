@@ -17,8 +17,9 @@ The quickest way to get started is to copy the `.emacs.d` directory
 from this repository to your home folder under `cygwin` (for instance `/home/YourName`).
 Then also unzip the `ctags58.7z` in the home folder  ("Extract here"  of 7-zip).
 
-Then, if you execute `emacs-w32` in the `cygwin`
-shell you should get a fully functional Emacs window.
+Then, if you execute `emacs-w32` in the `cygwin` shell you should get
+a fully functional Emacs window. Please be patient, Emacs will first
+download and install a handful of packages from the web. This only happens the first time Emacs starts.
 
 If you wish, this default set up may be modified as described below.
 
@@ -27,29 +28,28 @@ If you wish, this default set up may be modified as described below.
 My personal copy of this directory, partially equipped, is part of
 this repository.
 
-- The Julia mode, represented by the `julia-mode.el` file, is included in  `.emacs.d/lisp`.
-- The Julia minor mode for the REPL, `julia-repl.el`,  is included in  `.emacs.d/lisp`.
-- For some weird reason `s.el` is needed but not found in some default location.
-To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
+
+- The Julia mode, `julia-mode.el`, and the Julia minor mode for the
+  REPL, `julia-repl.el`, are installed from the MELPA archive when
+  Emacs starts for the first time.
+- For some weird reason `s.el` is needed but not found in some default location. It is also installed automatically.
+- The `yasnippet` package is also installed from the web.
 - The `.emacs.d/lisp` directory holds a copy of the `multiple-cursors` package.
-- The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
 - The `.emacs.d/snippets` directory also includes my version of the Julia snippets for the  `yasnippet` package.
 
-Both the Julia mode and  the Julia REPL will be soon available from [MELPA](https://melpa.org/#/getting-started).
-When that happens, it should be enough to rely on `(require 'julia-mode)` etc. instead of the bundled files.
 It is certainly possible to install updates to certain packages (such as the Julia modes) from MELPA.
-For instance,  use `package` to install from Emacs package repositories (for which `init.el` file
+You may wish to  use `package` to install from Emacs package repositories (for which `init.el` file
 is already set up).
-
-### Additional installs
-
-Use the package manager to install `markdown-mode`.
 
 ### The `init.el` file
 
 My copy of the `init.el` file is part of this repository
 [(see)](https://github.com/PetrKryslUCSD/HowToUseJuliaWithCygwinEmacs/tree/master/.emacs.d).
 It is fully commented.
+
+### Additional installs
+
+Use the package manager to install `markdown-mode`.
 
 ## Dragon voice commands
 
