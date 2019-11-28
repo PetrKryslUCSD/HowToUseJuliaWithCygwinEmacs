@@ -20,8 +20,9 @@ this repository.
 - The Julia minor mode for the REPL, `julia-repl.el`,  is included in  `.emacs.d/lisp`.
 - For some weird reason `s.el` is needed but not found in some default location.
 To cover this case  I have included `s.el` in my `.emacs.d/lisp` directory.
-- The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
 - The `.emacs.d/lisp` directory holds a copy of the `multiple-cursors` package.
+- The `.emacs.d/plugins` directory also includes a copy of the `yasnippet` package.
+- The `.emacs.d/snippets` directory also includes my version of the Julia snippets for the  `yasnippet` package.
 
 Both the Julia mode and  the Julia REPL will be soon available from [MELPA](https://melpa.org/#/getting-started).
 When that happens, it should be enough to rely on `(require 'julia-mode)` etc. instead of the bundled files.
@@ -73,7 +74,11 @@ Any other Git command may also be used, of course.
 
 ### Tags
 
-Needs to be written
+I use the program *Exuberant CTAGS* (http://ctags.sourceforge.net/). Furthermore, the language-definition file
+[julia-ctags](https://github.com/JuliaEditorSupport/julia-ctags
+) is needed. Both of these are packaged in a zip archive included with this repository.
+
+The usage of the tags is supported with voice commands, including  the creation of the TAGS file (refer to the `init.el` file). 
 
 ### Dynamic abbreviations
 
