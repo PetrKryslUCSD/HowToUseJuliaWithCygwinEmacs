@@ -1,10 +1,14 @@
 # -*- mode: snippet -*-
 # name: docstring
-# key: docstring
+# key: docstringverbose
 # contributor: Petr Krysl
 # --
 """
     ${1:x}
 
-${2:body}$0
+${2:body}
+
+# Arguments
+# Output
+$0
 """
