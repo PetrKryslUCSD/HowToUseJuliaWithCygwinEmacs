@@ -5,8 +5,8 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-  ;; install use-package if not installed
-  (unless (package-installed-p 'use-package)
+;; install use-package if not installed
+(unless (package-installed-p 'use-package)
     (package-refresh-contents)
     (package-install 'use-package t))
 
