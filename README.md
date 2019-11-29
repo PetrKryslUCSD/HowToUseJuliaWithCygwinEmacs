@@ -128,12 +128,8 @@ there is a couple of voice commands for setting the multiple cursor.
 ### YASnippets
 
 The functionality is provided by [YASnippets](https://github.com/joaotavora/yasnippet).
-If you wish, you can install this package by yourself:
-```
-cd ~/.emacs.d/plugins
-git clone --recursive https://github.com/joaotavora/yasnippet
-```
-Otherwise the `.emacs.d/plugins/` directory contains a copy of this package.
+The package is installed automatically when Emacs starts for the first time.
+
 
 The foundation consists of Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets).
 I added a few of my own.
