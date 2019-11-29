@@ -17,6 +17,13 @@
       ;; some config for s here
 )
 
+;; install magit
+(use-package magit
+      :ensure t
+      :config
+      ;; some config for magit here
+)
+
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
