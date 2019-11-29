@@ -1,6 +1,8 @@
 # How to use Julia with Cygwin Emacs
 
-## Which  Emacs?
+## Configuration of Cygwin
+
+### Which  Emacs?
 
 I am running `cygwin` version 2.897 (64-bit) on Windows 10.
 
@@ -8,20 +10,38 @@ I use the `emacs-w32` package in `cygwin`. As I understand it this is emacs
 compiled for the win 32 api, and so it is using the native UI.
 Importantly, it supports the ANSI term.
 
-The problem for me with emacs-X11 is
+The problem for me with `emacs-X11` is that the window of the
+application is not recognized as anything else but `Xwin`. That makes
+it impossible to connect a command set in my voice recognition program
+to the window.
 
-I went with the latest version, that is 26.3 (November 2019). The
-packages to download are `emacs-w32` and `emacs-common`. 
+The problem with `emacs-X11` for everyone is that it requires the X
+server to be running under `cygwin`: it is resource hungry, and it
+slows down Windows noticeably. The `emacs-w32` is without doubt
+snappier.
+
+I went with the latest version of `emacs-w32`, that is 26.3 (November 2019). The
+packages to download are `emacs-w32` and `emacs-common`.
+
+### Git
+
+The Emacs package `magit` is a really convenient and intuitive wrapper to Git.
+If you wish to use it under `cygwin`, it is imperative that you
+install the `git` `cygwin` package. Otherwise Emacs would probably try to use
+a Windows `git` instead of the `cygwin` one, and `magit` would fail to bring up `emacsclient` when
+committing.
 
 ## Starting Emacs
 
 The quickest way to get started is to copy the `.emacs.d` directory
-from this repository to your home folder under `cygwin` (for instance `/home/YourName`).
-Then also unzip the `ctags58.7z` in the home folder  ("Extract here"  of 7-zip).
+from this repository to your home folder under `cygwin` (for instance
+`/home/YourName`).  Then also unzip the `ctags58.7z` in the home
+folder ("Extract here" of 7-zip).
 
 Then, if you execute `emacs-w32` in the `cygwin` shell you should get
 a fully functional Emacs window. Please be patient, Emacs will first
-download and install a handful of packages from the web. This only happens the first time Emacs starts.
+download and install a handful of packages from the web. This only
+happens the first time Emacs starts.
 
 If you wish, this default set up may be modified as described below.
 
@@ -34,10 +54,12 @@ this repository.
 - The Julia mode, `julia-mode.el`, and the Julia minor mode for the
   REPL, `julia-repl.el`, are installed from the MELPA archive when
   Emacs starts for the first time.
-- For some weird reason `s.el` is needed but not found in some default location. It is also installed automatically.
+- For some weird reason `s.el` is needed but not found in some default
+  location. It is also installed automatically.
 - The `yasnippet` package is also installed from the web.
 - The `.emacs.d/lisp` directory holds a copy of the `multiple-cursors` package.
-- The `.emacs.d/snippets` directory also includes my version of the Julia snippets for the  `yasnippet` package.
+- The `.emacs.d/snippets` directory also includes my version of the
+  Julia snippets for the `yasnippet` package.
 
 It is certainly possible to install updates to certain packages (such as the Julia modes) from MELPA.
 You may wish to  use `package` to install from Emacs package repositories (for which `init.el` file
@@ -80,13 +102,8 @@ cygwin and the Windows drives.
 
 ### Git
 
-For working with Git I use command-line `git`running in an extended
-Emacs shell, opened with the command `open git`.  The shell is renamed
-to `*git ddd*`, where `ddd` is the name of the git repository (directory).
-The command is supported with a bit of Lisp code in `init.el`.
+For working with Git I use the Emacs package `magit`.  It  may be opened with the voice command `open git`. 
 
-The Git commands in common use  (status, add, commit, ...) are provided as voice commands.
-Any other Git command may also be used, of course.
 
 ### Tags
 
