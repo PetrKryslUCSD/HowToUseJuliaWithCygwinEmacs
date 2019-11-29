@@ -8,6 +8,8 @@ I use the `emacs-w32` package in `cygwin`. As I understand it this is emacs
 compiled for the win 32 api, and so it is using the native UI.
 Importantly, it supports the ANSI term.
 
+The problem for me with emacs-X11 is
+
 I went with the latest version, that is 26.3 (November 2019). The
 packages to download are `emacs-w32` and `emacs-common`. 
 
