@@ -153,3 +153,5 @@ automatically install necessary packages from the Emacs
 archives. [tamas_papp](https://discourse.julialang.org/u/tamas_papp)
 is the (co-)author of the Julia packages, and was instrumental in
 making this whole thing work under `cygwin`.
+
+And
