@@ -27,7 +27,7 @@ packages to download are `emacs-w32` and `emacs-common`.
 
 The Emacs package `magit` is a really convenient and intuitive wrapper
 to Git.  If you wish to use it under `cygwin`, it is imperative that
-you install the `git` `cygwin` package. Otherwise Emacs would probably
+you install the `cygwin` package `git`. Otherwise Emacs would probably
 try to use a Windows `git` instead of the `cygwin` one, and `magit`
 would fail to bring up `emacsclient` when committing.
 
