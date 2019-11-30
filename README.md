@@ -49,7 +49,7 @@ The details of the default configuration are described below.
 
 ## Makeup of the `.emacs.d` directory
 
-My personal copy of this directory, partially equipped, is part of
+My personal copy of this directory, preconfigured for immediate use, is part of
 this repository.
 
 
