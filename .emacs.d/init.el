@@ -5,8 +5,8 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-;; install use-package if not installed
-(unless (package-installed-p 'use-package)
+  ;; install use-package if not installed
+  (unless (package-installed-p 'use-package)
     (package-refresh-contents)
     (package-install 'use-package t))
 
@@ -15,14 +15,15 @@
       :ensure t
       :config
       ;; some config for s here
-)
+      )
 
-;; install magit
-(use-package magit
-      :ensure t
-      :config
-      ;; some config for magit here
-)
+;; Set up the immensely useful Ido mode.
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+;; Bind the imenu to a key
+(global-set-key (kbd "M-i") 'imenu)
 
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -122,7 +123,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (markdown-mode yasnippet)))
+ '(package-selected-packages (quote (magit markdown-mode yasnippet)))
  '(visible-cursor t))
 
 ;; It is great to be able to see the cursor at the first glance.
