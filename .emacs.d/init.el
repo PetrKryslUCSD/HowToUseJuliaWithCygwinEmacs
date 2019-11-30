@@ -55,6 +55,13 @@
 ;; Command to insert a matching pair of square brackets
 (global-set-key (kbd "M-[") 'insert-pair)
 
+;; Show the kill ring as a pop-up menu
+(defun show-kill-ring-pop-up-menu ()
+  "Show the kill ring pop-up menu."
+  (interactive)
+  (popup-menu 'yank-menu)
+  )
+
 ;; Quiet, please! No dinging!
 (setq visible-bell nil)
 (setq ring-bell-function `(lambda ()
