@@ -17,6 +17,15 @@
       ;; some config for s here
       )
 
+;; install expand-region.el
+(use-package expand-region
+      :ensure t
+      :config
+      ;; some config for expand-region here
+      )
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; Set up the immensely useful Ido mode.
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -120,7 +129,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (magit markdown-mode yasnippet)))
+ '(package-selected-packages (quote (expand-region magit markdown-mode yasnippet)))
  '(visible-cursor t))
 
 ;; It is great to be able to see the cursor at the first glance.

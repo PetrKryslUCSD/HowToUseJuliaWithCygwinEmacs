@@ -146,6 +146,14 @@ The foundation consists of Julia snippets courtesy of AndreaCrotti
 (https://github.com/AndreaCrotti/yasnippet-snippets).  I added a few
 of my own.
 
+### Expansion of directory and folder names
+
+- `ido-mode`
+
+### Selecting
+
+- `expand-region`
+
 ### Markdown
 
 I use the [markdown mode](http://jblevins.org/projects/markdown-mode/).
