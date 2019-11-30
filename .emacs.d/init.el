@@ -22,9 +22,6 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 
-;; Bind the imenu to a key
-(global-set-key (kbd "M-i") 'imenu)
-
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
