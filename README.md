@@ -25,11 +25,11 @@ packages to download are `emacs-w32` and `emacs-common`.
 
 ### Git
 
-The Emacs package `magit` is a really convenient and intuitive wrapper to Git.
-If you wish to use it under `cygwin`, it is imperative that you
-install the `git` `cygwin` package. Otherwise Emacs would probably try to use
-a Windows `git` instead of the `cygwin` one, and `magit` would fail to bring up `emacsclient` when
-committing.
+The Emacs package `magit` is a really convenient and intuitive wrapper
+to Git.  If you wish to use it under `cygwin`, it is imperative that
+you install the `git` `cygwin` package. Otherwise Emacs would probably
+try to use a Windows `git` instead of the `cygwin` one, and `magit`
+would fail to bring up `emacsclient` when committing.
 
 ## Starting Emacs
 
@@ -41,7 +41,8 @@ folder ("Extract here" of 7-zip).
 Then, if you execute `emacs-w32` in the `cygwin` shell you should get
 a fully functional Emacs window. Please be patient, Emacs will first
 download and install a handful of packages from the web. This only
-happens the first time Emacs starts.
+happens the first time Emacs starts. The automatic configuration is
+made possible by the fantastic `use-package` Emacs package.
 
 If you wish, this default set up may be modified as described below.
 
@@ -61,9 +62,10 @@ this repository.
 - The `.emacs.d/snippets` directory also includes my version of the
   Julia snippets for the `yasnippet` package.
 
-It is certainly possible to install updates to certain packages (such as the Julia modes) from MELPA.
-You may wish to  use `package` to install from Emacs package repositories (for which `init.el` file
-is already set up).
+It is certainly possible to install updates to certain packages (such
+as the Julia modes) from MELPA.  You may wish to use `package` to
+install from Emacs package repositories (for which `init.el` file is
+already set up).
 
 ### The `init.el` file
 
@@ -102,21 +104,30 @@ cygwin and the Windows drives.
 
 ### Git
 
-For working with Git I use the Emacs package `magit`.  It  may be opened with the voice command `open git`. 
+For working with Git I use the Emacs package `magit`.  It may be
+opened with the voice command `open git`. Additional commands are
+available for `magit-status` and so on.
 
 
 ### Tags
 
-I use the program *Exuberant CTAGS* (http://ctags.sourceforge.net/). Furthermore, the language-definition file
-[julia-ctags](https://github.com/JuliaEditorSupport/julia-ctags
-) is needed. Both of these are packaged in a zip archive included with this repository.
+I use the program *Exuberant CTAGS*
+(http://ctags.sourceforge.net/). Furthermore, the language-definition
+file [julia-ctags](https://github.com/JuliaEditorSupport/julia-ctags )
+is needed. Both of these are packaged in a zip archive included with
+this repository.
 
-The usage of the tags is supported with voice commands, including  the creation of the TAGS file (refer to the `init.el` file). 
+The usage of the tags is supported with voice commands, including the
+creation of the TAGS file (refer to the `init.el` file).
 
 ### Dynamic abbreviations
 
-I use HippieExpand. A voice command is linked  to
-`(global-set-key [remap dabbrev-expand] 'hippie-expand)`.
+I use HippieExpand. A voice command is linked to `hippie-expand` which
+is remapped from `dabbrev-expand`:
+```
+(global-set-key [remap dabbrev-expand] 'hippie-expand)
+```
+Visiting a TAGS file makes also the source-code tags available to HippieExpand.
 
 ### Multiple cursors
 
@@ -131,8 +142,9 @@ The functionality is provided by [YASnippets](https://github.com/joaotavora/yasn
 The package is installed automatically when Emacs starts for the first time.
 
 
-The foundation consists of Julia snippets courtesy of AndreaCrotti (https://github.com/AndreaCrotti/yasnippet-snippets).
-I added a few of my own.
+The foundation consists of Julia snippets courtesy of AndreaCrotti
+(https://github.com/AndreaCrotti/yasnippet-snippets).  I added a few
+of my own.
 
 ### Markdown
 
