@@ -44,7 +44,8 @@ download and install a handful of packages from the web. This only
 happens the first time Emacs starts. The automatic configuration is
 made possible by the fantastic `use-package` Emacs package.
 
-If you wish, this default set up may be modified as described below.
+If you wish, this default setup may be modified.
+The details of the default configuration are described below.
 
 ## Makeup of the `.emacs.d` directory
 
