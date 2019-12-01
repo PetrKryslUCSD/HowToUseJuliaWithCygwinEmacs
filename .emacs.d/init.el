@@ -5,16 +5,23 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-  ;; install use-package if not installed
-  (unless (package-installed-p 'use-package)
-    (package-refresh-contents)
-    (package-install 'use-package t))
+;; install use-package if not installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package t))
 
 ;; install s.el
 (use-package s
       :ensure t
       :config
       ;; some config for s here
+      )
+
+;; install magit.el
+(use-package magit
+      :ensure t
+      :config
+      ;; some config for magit here
       )
 
 ;; install expand-region.el
