@@ -7,11 +7,9 @@ module ${1:name}
 using FinEtools
 using Test
 function test()	
-${2:body}
+${0}
 return true
 end
 end
-using .${1:name}
-${1:name}.test()
-$0
-
+using .${1}
+${1}.test()

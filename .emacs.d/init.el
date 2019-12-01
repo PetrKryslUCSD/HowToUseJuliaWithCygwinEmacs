@@ -15,7 +15,21 @@
       :ensure t
       :config
       ;; some config for s here
-)
+      )
+
+;; install expand-region.el
+(use-package expand-region
+      :ensure t
+      :config
+      ;; some config for expand-region here
+      )
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;; Set up the immensely useful Ido mode.
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 
 ;; Add the local list files to the load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -40,6 +54,13 @@
 
 ;; Command to insert a matching pair of square brackets
 (global-set-key (kbd "M-[") 'insert-pair)
+
+;; Show the kill ring as a pop-up menu
+(defun show-kill-ring-pop-up-menu ()
+  "Show the kill ring pop-up menu."
+  (interactive)
+  (popup-menu 'yank-menu)
+  )
 
 ;; Quiet, please! No dinging!
 (setq visible-bell nil)
@@ -115,7 +136,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (misterioso)))
  '(mouse-drag-and-drop-region t)
- '(package-selected-packages (quote (markdown-mode yasnippet)))
+ '(package-selected-packages (quote (expand-region magit markdown-mode yasnippet)))
  '(visible-cursor t))
 
 ;; It is great to be able to see the cursor at the first glance.
